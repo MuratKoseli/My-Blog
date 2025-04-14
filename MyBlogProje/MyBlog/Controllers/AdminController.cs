@@ -173,8 +173,6 @@ namespace MyBlog.Controllers
                     return RedirectToAction("Index", "Posts", new { category = selectedCategory });
                 }
 
-                // return RedirectToAction("Index", "Posts");
-                // return RedirectToAction("ManagePosts", "Admin");
 
             }
 

@@ -16,10 +16,7 @@ namespace MyBlog.Controllers
             _articleRepository = articleRepository;
         }
 
-        // public async Task<IActionResult> Home()
-        // {
-        //     return View(await _reposiyory.Articles.ToListAsync());
-        // }
+
         public async Task<IActionResult>  Index()
         {
             return View(await _articleRepository.Articles.ToListAsync());
@@ -34,7 +31,7 @@ namespace MyBlog.Controllers
                 return NotFound();
             }
             return View(art);
-            // return View( await _reposiyory.Articles.FirstOrDefaultAsync(p=>p.Url==url));
+           
         }
     }
 }

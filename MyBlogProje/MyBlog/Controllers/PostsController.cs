@@ -25,10 +25,7 @@ namespace MyBlog.Controllers
             _postRepository = postRepository;
 
         }
-        // BlogContext bağımlılığı controller'a enjekte edilir.
-        // _context ile controller içinde veritabanına erişim sağlanır.
-        // Dependency Injection sayesinde bağımlılık yönetimi kolaylaşır ve bağımsız test edilebilir kod yazılır.
-        //Repository'den sonra buna evrildi.
+        
 
         public async Task<IActionResult> Index(string category, int page = 1, int pageSize = 5)
         {
@@ -39,12 +36,12 @@ namespace MyBlog.Controllers
                 postsQuery = postsQuery.Where(x => x.Category!.CategoryName!.ToLower() == category.ToLower());
             }
 
-            var totalPosts = await postsQuery.CountAsync(); // Toplam post sayısını al
+            var totalPosts = await postsQuery.CountAsync(); 
 
             var posts = await postsQuery
                 .OrderByDescending(p => p.CreatedAt)
-                .Skip((page - 1) * pageSize) // Sayfa atlaması yap
-                .Take(pageSize) // Sayfadaki öğe sayısını belirle
+                .Skip((page - 1) * pageSize) 
+                .Take(pageSize) 
                 .ToListAsync();
 
             ViewBag.TotalPages = (int)Math.Ceiling((double)totalPosts / pageSize);
@@ -56,15 +53,6 @@ namespace MyBlog.Controllers
 
 
 
-        // public async Task<IActionResult> Index(string category)
-        // {
-
-        //     var posts = await _postRepository.Posts.Where(x=> x.Category!.CategoryName!.ToLower() == category.ToLower()).OrderByDescending(p => p.CreatedAt).ToListAsync();
-        //     return View(posts);
-        //     // return View(await _postRepository.Posts.ToListAsync());
-
-
-        // }
 
         [HttpGet]
 
@@ -81,15 +69,3 @@ namespace MyBlog.Controllers
     }
 }
 
-
-
-// var allowedExtension = new[] {".jpg", ".jpeg", ".png", ".webp"};
-// var extension = Path.GetExtension(imageFile.FileName);
-// var randomFileName= string.Format($"{Guid.NewGuid().ToString()}{extension}");
-// var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", randomFileName);
-
-// if(imageFile!= null){
-// if(!allowedExtension.Contains(extension))
-// {
-//     ModelState.AddModelError("", "Geçerli bi resim seçiniz");
-// }

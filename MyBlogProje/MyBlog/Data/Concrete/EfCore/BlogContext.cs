@@ -15,7 +15,7 @@ namespace MyBlog.Data.Concrete.EfCore
         {
 
         }
-        // Bu constructor, Bağımlılık Enjeksiyonu (Dependency Injection, DI) ile veritabanı bağlantı ayarlarını alır ve DbContext'e aktarır. Startup.cs veya Program.cs dosyasında, uygulamaya hangi veritabanının kullanılacağını belirtirken bu seçenekler belirlenir.
+       
 
 
         public DbSet<Category> Categories => Set<Category>();
@@ -25,8 +25,3 @@ namespace MyBlog.Data.Concrete.EfCore
     }
 }
 
-// Bu kod, Entity Framework Core kullanarak bir veritabanı bağlamı (DbContext) tanımlar. Yani, veritabanı ile ASP.NET Core uygulaman arasındaki bağlantıyı ve işlemleri yönetmek için kullanılır.
-// Bu BlogContext sınıfı sayesinde:
-// -Entity Framework Core kullanarak veritabanını C# nesneleri ile yönetebilirsin.
-// -DbSet<T> ile veritabanındaki tabloların C# sınıfları ile eşlenmesini sağlarsın.
-// -DbContext aracılığıyla veritabanına bağlanabilir, veri ekleyebilir, güncelleyebilir veya sorgular çalıştırabilirsin.
