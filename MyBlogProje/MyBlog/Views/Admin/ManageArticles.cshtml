@@ -1,0 +1,32 @@
+@model IEnumerable<Article>
+
+@{
+    ViewData["Title"] = "Ana Sayfa Yönetimi";
+}
+
+<h1>@ViewData["Title"]</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Başlık</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var article in Model)
+        {
+             <tr>
+                <td>@article.Title</td>
+                <td>
+                    <a href="@Url.Action("EditArticle", "Admin", new { id = article.ArticleId })">Düzenle</a> |
+                    <a href="@Url.Action("DeleteArticle", "Admin", new { id = article.ArticleId })">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p><a href="@Url.Action("CreateArt", "Admin")">Article Ekle</a></p>
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</p>

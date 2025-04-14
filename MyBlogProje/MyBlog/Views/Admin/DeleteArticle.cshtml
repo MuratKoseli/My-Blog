@@ -1,0 +1,11 @@
+@model ArticleDeleteViewModel
+
+<h2>Article Sil</h2>
+
+<p><strong>@Model.Title</strong> başlıklı postu silmek istediğinizden emin misiniz?</p>
+
+<form asp-action="DeleteArticle" method="post">
+    <input type="hidden" name="ArticleId" value="@Model.ArticleId" />
+    <button type="submit" class="btn btn-danger">Evet</button>
+    <a asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>

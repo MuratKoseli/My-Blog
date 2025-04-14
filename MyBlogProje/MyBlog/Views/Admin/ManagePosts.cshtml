@@ -1,0 +1,35 @@
+@model IEnumerable<Post>
+
+@{
+    ViewData["Title"] = "Post Yönetimi";
+}
+
+<h1>@ViewData["Title"]</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Başlık</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var post in Model)
+        {
+             <tr>
+                <td>@post.Title</td>
+                <td>
+                    <a href="@Url.Action("EditPost", "Admin", new { id = post.PostId })">Düzenle</a> |
+                    <a href="@Url.Action("DeletePost", "Admin", new { id = post.PostId })">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p><a href="@Url.Action("CreatePost", "Admin")">Post Ekle</a></p>
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</p>
+
+
+

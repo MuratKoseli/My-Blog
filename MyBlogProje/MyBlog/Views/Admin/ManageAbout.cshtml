@@ -1,0 +1,31 @@
+@model IEnumerable<About>
+
+ @{
+    ViewData["Title"] = "Hakkımda Yönetimi";
+}
+
+<h1>@ViewData["Title"]</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Başlık</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var about in Model)
+        {
+             <tr>
+                <td>@about.Title</td>
+                <td>
+                    <a href="@Url.Action("EditAbout", "Admin", new { id = about.AboutId })">Düzenle</a> |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p><a href="@Url.Action("CreateAbout", "Admin")">Hakkımda Ekle</a></p>   
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</p>

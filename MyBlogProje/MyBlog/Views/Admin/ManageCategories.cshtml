@@ -1,0 +1,32 @@
+@model IEnumerable<Category>
+
+ @{
+    ViewData["Title"] = "Kategori Yönetimi";
+}
+
+<h1>@ViewData["Title"]</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Başlık</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var category in Model)
+        {
+             <tr>
+                <td>@category.CategoryName</td>
+                <td>
+                    <a href="@Url.Action("EditCategory", "Admin", new { id = category.CategoryId })">Düzenle</a> |
+                    <a href="@Url.Action("DeletePost", "Admin", new { id = category.CategoryId })">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p><a href="@Url.Action("CreateCategory", "Admin")">Kategori Ekle</a></p> 
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</p>  

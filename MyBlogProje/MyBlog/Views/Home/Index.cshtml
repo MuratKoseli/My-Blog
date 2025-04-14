@@ -1,0 +1,86 @@
+@* <div>
+    <p>
+        <hr>
+    <h1 class="h4 mb-4" style="font-family:serif; letter-spacing: 2px; text-align: center; ">"Ölümün bizleri duymaması
+        için çıkarmadığımız sesimiz, yaşamın bizi bulmasına da engel oldu. Ölüme yakalanmadan yaşamı aramaya çalıştık ve
+        bize tanık olan Tanrı’dır."
+
+    </h1>
+    <hr>
+    </p>
+    <div class="col-12">
+        <img src="@Url.Content("~/img/prs.jpg")" class="img-fluid " alt="Resim">
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="p-4" style="background-color: #e2e0c8ba">
+
+            <div>
+                <hr>
+            </div>
+            @foreach (var art in Model)
+            {
+                <div class="card bg-transparent border-0 mb-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="/home/details/@art.Url"><img src="~/img/@art.Image" class="img-fluid " alt=""
+                                    width="100%"></a>
+                        </div>
+                        <div class="col-6">
+                            <h5>
+                                <a href="/home/details/@art.Url" class="btn-link fw-bold"
+                                    style="color: black; text-decoration: none;">
+                                    @art.Title
+                                </a>
+                            </h5>
+                            <p class="text-muted small">@art.Description</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-3">
+            }
+        </div>
+    </div>
+</div> *@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css" asp-append-version="true">
+
+    <title>Post Düzeni</title>
+</head>
+<body>
+    <div class="quote h4 mb-4">"Ölümün bizleri duymaması için çıkarmadığımız sesimiz, yaşamın bizi bulmasına da engel oldu. Ölüme yakalanmadan yaşamı aramaya çalıştık ve bize tanık olan Tanrı’dır."</div>
+    <hr>
+    <div class=""></div>
+    <div class="image-container">
+        <img src="@Url.Content("~/img/prs.jpg")" class="img-fluid" alt="Resim">
+
+    </div>
+    <div class="content-container">
+        <div class="divider"></div>
+        <div class="posts">
+            @foreach (var art in Model) {
+                <div class="post">
+                    <a href="/home/details/@art.Url">
+                        <img src="~/img/@art.Image" class="img-fluid" alt="">
+                    </a>
+                    <br>
+                    <h5>
+                        <a href="/home/details/@art.Url" class="btn-link fw-bold" style="color: black; text-decoration: none;">
+                            @art.Title
+                        </a>
+                    </h5>
+                    <p class="text-muted small">@art.Description</p>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

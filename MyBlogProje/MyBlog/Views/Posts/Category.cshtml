@@ -1,0 +1,27 @@
+@model PostCategoryViewModel
+
+<h1>@Model.Category?.CategoryName ?? "Kategori Bulunamadı"</h1>
+
+<div class="row">
+    @if (Model.Posts != null && Model.Posts.Any())
+    {
+        @foreach (var post in Model.Posts)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/img/@post.Image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="/Posts/Details/@post.Url">@post.Title</a>
+                        </h5>
+                        <p class="card-text">@post.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>Bu kategoride henüz bir yazı bulunmamaktadır.</p>
+    }
+</div>

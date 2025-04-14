@@ -1,0 +1,28 @@
+@model CategoryCreateViewModel
+
+
+@{
+    ViewData["Title"] = "Kategori Düzenle";
+}
+
+<h2>Kategori Düzenle</h2>
+
+<form asp-controller="Admin" asp-action="EditCategory" method="post">
+    <input type="hidden" asp-for="CategoryId" />
+
+    <div class="form-group">
+        <label asp-for="CategoryName" class="control-label"></label>
+        <input asp-for="CategoryName" class="form-control" />
+        <span asp-validation-for="CategoryName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Url" class="control-label"></label>
+        <textarea asp-for="Url" class="form-control"></textarea>
+        <span asp-validation-for="Url" class="text-danger"></span>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+    <a asp-action="ManageCategory" class="btn btn-secondary">Geri Dön</a>
+</form>

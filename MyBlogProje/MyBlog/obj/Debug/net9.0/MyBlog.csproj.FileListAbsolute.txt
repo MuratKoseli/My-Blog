@@ -1,0 +1,8 @@
+C:\Users\Kullanıcı\Desktop\MyBlogProje\MyBlog\obj\Debug\net9.0\MyBlog.csproj.AssemblyReference.cache
+C:\Users\Kullanıcı\Desktop\MyBlogProje\MyBlog\obj\Debug\net9.0\MyBlog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kullanıcı\Desktop\MyBlogProje\MyBlog\obj\Debug\net9.0\MyBlog.AssemblyInfoInputs.cache
+C:\Users\Kullanıcı\Desktop\MyBlogProje\MyBlog\obj\Debug\net9.0\MyBlog.AssemblyInfo.cs
+C:\Users\Kullanıcı\Desktop\MyBlogProje\MyBlog\obj\Debug\net9.0\MyBlog.csproj.CoreCompileInputs.cache
+C:\Users\Kullanıcı\Desktop\MyBlogProje\MyBlog\obj\Debug\net9.0\MyBlog.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Kullanıcı\Desktop\MyBlogProje\MyBlog\obj\Debug\net9.0\MyBlog.RazorAssemblyInfo.cache
+C:\Users\Kullanıcı\Desktop\MyBlogProje\MyBlog\obj\Debug\net9.0\MyBlog.RazorAssemblyInfo.cs

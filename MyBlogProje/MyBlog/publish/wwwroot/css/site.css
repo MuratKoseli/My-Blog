@@ -1,0 +1,63 @@
+body {
+    background-color: #FAF3E0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #A7B49E !important;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000; */
+
+}
+
+.navbar a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+
+}
+
+.footer {
+    background-color: #A7B49E; /* Footer arka plan rengi */
+    color:#000000;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.footer a {
+    color:#000000; /* Bağlantı renkleri beyaz */
+    text-decoration: none; /* Bağlantılarda alt çizgi kaldır */
+    margin: 0 10px; /* Bağlantılar arasına boşluk ekle */
+}
+
+.container {
+    max-width: 1000px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.custom-container {
+    max-width: 1200px; 
+    width: 100%; 
+}
+
+.custom-dropdown {
+    background-color: #A7B49E;
+}
+
+.custom-dropdown .dropdown-item {
+    color: black !important; 
+}
+.custom-dropdown .dropdown-item:hover {
+    background-color:#869f75 !important; 
+}
+

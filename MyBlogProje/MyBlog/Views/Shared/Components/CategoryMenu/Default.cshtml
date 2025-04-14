@@ -1,0 +1,24 @@
+@model List<Category>
+
+<ul class="dropdown-menu custom-dropdown">
+    @foreach (var category in Model)
+    {
+        <li>
+            <a class="dropdown-item" href="/posts?category=@category.CategoryName">@category.CategoryName</a>
+        </li>
+    }
+</ul>
+
+
+
+
+@* @model List<Category>
+
+    <ul class="navbar-nav">
+    @foreach (var category in Model)
+    {
+        <li class="nav-item">
+            <a class="nav-link" href="/posts?category=@category.CategoryName">@category.CategoryName</a>
+        </li>
+    }
+</ul> *@

@@ -1,0 +1,48 @@
+.content-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #e2e0c8ba;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.post {
+    border-top: 0.5px solid black;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post img {
+    width: 100%; /* Görselin genişliği tam uyumlu olacak */
+    max-width: 440px; /* Maksimum genişlik sınırı */
+    height: 300px; /* Sabit yükseklik ile aynı boyutta görünmesini sağladım */
+    object-fit: cover; /* Görselin taşmasını önler ve içeriğe tam oturmasını sağlar */
+    border-radius: 5px; /* Köşeleri hafif yuvarlatma (opsiyonel) */
+}
+
+.quote {
+    font-family: serif;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .posts {
+        grid-template-columns: 1fr;
+    }
+
+    .post img {
+        width: 100%; /* Küçük ekranlarda tam genişlik */
+        height: auto; /* Oran korunsun */
+    }
+}
